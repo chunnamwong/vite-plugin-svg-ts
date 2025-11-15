@@ -92,14 +92,11 @@ ${declaration}
 ${assignments.join('\n')}
 
 export default svgs;`;
-				return code;
+				return {
+					code,
+					map: { mappings: '' },
+				};
 			}
-		},
-		transform(code) {
-			return {
-				code,
-				map: { mappings: '' },
-			};
 		},
 	};
 }
